@@ -13,10 +13,14 @@ public class Snakes_Ladders {
 
     public static void main(String[] args) {
         System.out.println("Starting position of the player = " + position);
+        int counter = 0;
+
         //Use while to iterate the values till end position reaches
         while (position < 100) {
             //Use random function to get dice value
             int dice = (int) (Math.floor(Math.random() * 10) % 6 + 1);
+            counter++;
+
             //Use random function to check which case get to the player
             int check = (int) ((Math.random() * 10) % 3);
             switch (check) {
@@ -44,6 +48,8 @@ public class Snakes_Ladders {
                 System.out.println("Player won the game");
             }
         }
+        //Counter of rolling dice
+        System.out.println("Count of rolling dice = " +counter);
 
     }
 }
